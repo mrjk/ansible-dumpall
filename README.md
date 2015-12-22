@@ -3,7 +3,7 @@ Dumpall role for Ansible
 
 Dump all remote variables and (optionally) copy the result to a destination on the host.
 
-Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), and the very nice implementation of [f55](https://github.com/f500/ansible-dumpall). This version basically fixes some minor bugs, and avoid file name collision.
+Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), and the very nice implementation of [f500](https://github.com/f500/ansible-dumpall). This version basically fixes some minor bugs, and avoid file name collision.
 
 Requirements
 ------------
