@@ -46,8 +46,10 @@ LGPL
 Author Information
 ------------------
 
+mrjk, jeznet.org
+
 Jasper N. Brouwer, jasper@nerdsweide.nl
 
 Ramon de la Fuente, ramon@delafuente.nl
 
-MrJK, jeznet.org
+
