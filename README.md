@@ -1,6 +1,8 @@
 Dumpall role for Ansible
 ========
 
+[![Ansible Galaxy Role](https://img.shields.io/badge/Ansible%20Role-mrjk.dumpall-blue.svg?style=flat-square)](https://galaxy.ansible.com/detail#/role/6960)
+
 Dump all remote variables and (optionally) copy the result to a destination on the host.
 
 Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), and the very nice implementation of [f500](https://github.com/f500/ansible-dumpall). This version basically fixes some minor bugs, and avoid file name collision.
