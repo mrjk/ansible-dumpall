@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: "MrJK, Jasper N. Brouwer, Ramon de la Fuente"
-  description: Dumps all the Ansible variables into a file for inspection
+  author: "mrjk, Jasper N. Brouwer, Ramon de la Fuente"
+  description: Dumps all the Ansible variables into a file for inspection and debug
   company: Jeznet
   license: LGPL
   min_ansible_version: 1.4
@@ -37,6 +37,8 @@ galaxy_info:
       versions:
         - all
   categories:
-    - system
     - development
+    - debug
+    - variable
+    - export
 dependencies: []
