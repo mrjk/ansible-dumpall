@@ -16,7 +16,11 @@ GROUPS Variables ("groups"):
 --------------------------------
 {{ groups | to_nice_json }}
 
-HOST Variables ("hostvars"):
+{% for host in groups['all'] %}
+HOST Variables ("hostvars[host]"):
 --------------------------------
-{{ hostvars | to_nice_json }}
+{{ hostvars[host] | to_nice_json }}
+
+{% endfor %}
+
 
