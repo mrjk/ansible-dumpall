@@ -16,6 +16,7 @@ Installation
 ------------
 
 Via Ansible Galaxy:
+
     ansible-galaxy install mrjk/ansible-role-dumpall
 
 
