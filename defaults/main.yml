@@ -1,4 +1,6 @@
 ---
-dumpall_flat_mode: yes
+dumpall_keep_on_guest: no
+dumpall_keep_on_host: yes
+
 dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
