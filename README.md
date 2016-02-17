@@ -3,14 +3,16 @@ Dumpall role for Ansible
 
 [![Ansible Galaxy Role](https://img.shields.io/badge/Ansible%20Role-mrjk.dumpall-blue.svg?style=flat-square)](https://galaxy.ansible.com/detail#/role/6960)
 
-Dump all remote variables and (optionally) copy the result to a destination on the host. This role is Ansible 2.0 compatible.
+Dump all remote variables and (optionally) copy the result to a destination on the host. It is really helpful to have a dump of all variables (because the official documentation lacks of clarity on this point) and it helps a lot to debug your roles/playbooks.  This role is Ansible 2.0 compatible.
 
 Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), and the very nice implementation of [f500](https://github.com/f500/ansible-dumpall). This version basically fixes some minor bugs, and avoid file name collision.
 
 Requirements
 ------------
 
-None.
+* Ansible:
+ * Version: 1.4 and higher. 
+ * Version: 2.0 and higher.
 
 Installation
 ------------
@@ -23,9 +25,11 @@ Via Ansible Galaxy:
 Role Variables
 --------------
 
-    dumpall_flat_mode: yes
     dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
     dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
+
+The dumpall_guest_destination variable is where the dump file is created on the target. The dumpall_host_destination is where all dumps are retrieved from target.
+
 
 Example Playbook
 -------------------------
@@ -44,9 +48,6 @@ Example with a host_destination will result in a dumpfile /examine/ansible.all o
          - role: dumpall
            dumpall_host_destination: /tmp/my_prj
 
-
-If you also set the flat_mode to false, the local filename will be the entire path of the guest_destination,
-prepended by the hostname of the current play. See the Ansible _fetch_ module for more information.
 
 License
 -------
