@@ -12,6 +12,7 @@ dumpall_keep_on_host: yes
 # destination directory must already exists.
 dumpall_guest_destination: "/tmp/ansible_dump_{{ inventory_hostname }}"
 
-# Define here where you want to retrieve the dump file on the host.
+# Define here where you want to retrieve the dump file on the 
+# host. If this variable is not set, dumpall_keep_on_host is assumed to be False.
 dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 

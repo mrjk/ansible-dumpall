@@ -4,7 +4,6 @@
   assert:
     that:
     - dumpall_guest_destination is defined
-    - dumpall_host_destination is defined
     - dumpall_keep_on_guest is defined
     - dumpall_keep_on_host is defined
 
@@ -18,7 +17,9 @@
     src: "{{ dumpall_guest_destination }}"
     dest: "{{ dumpall_host_destination }}"
     flat: True
-    when: dumpall_keep_on_host == True
+    when: >
+      dumpall_host_destination is defined and
+      dumpall_keep_on_host == True
 
 - name: Remove dumpfile on the guest
   file: 
