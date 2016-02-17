@@ -2,11 +2,11 @@
 
 # Disable this option if you don't want to keep the dump file
 # on the target.
-dumpall_keep_on_guest: yes
+dumpall_keep_on_guest: no
 
 # Disable this option if you don't want to retrieve the dump file
 # on the host.
-dumpall_keep_on_host: no
+dumpall_keep_on_host: yes
 
 # Define here where you want to put the dump file on the target. The
 # destination directory must already exists.

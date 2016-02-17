@@ -30,7 +30,8 @@ Role Variables
     dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
     dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 
-The dumpall_keep_on_guest and dumpall_keep_on_host variables let you choose where you want to keep the dump file.
+The dumpall_keep_on_guest and dumpall_keep_on_host variables let you choose where you want to keep the dump file. The default setting is to keep files only on Ansible host.
+
 The dumpall_guest_destination variable is where the dump file is created on the target. The dumpall_host_destination is where all dumps are retrieved from target.
 
 All variables are mandatory, and they are documented in default/main.yml.
