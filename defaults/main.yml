@@ -1,6 +1,17 @@
 ---
-dumpall_keep_on_guest: no
-dumpall_keep_on_host: yes
 
+# Disable this option if you don't want to keep the dump file
+# on the target.
+dumpall_keep_on_guest: yes
+
+# Disable this option if you don't want to retrieve the dump file
+# on the host.
+dumpall_keep_on_host: no
+
+# Define here where you want to put the dump file on the target. The
+# destination directory must already exists.
 dumpall_guest_destination: "/tmp/ansible_dump_{{ inventory_hostname }}"
+
+# Define here where you want to retrieve the dump file on the host.
 dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
+

@@ -10,9 +10,8 @@ Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), an
 Requirements
 ------------
 
-* Ansible:
- * Version: 1.4 and higher. 
- * Version: 2.0 and higher.
+Ansible 1.4 and higher. This is compatible with Ansible 2.0.
+
 
 Installation
 ------------
@@ -25,11 +24,16 @@ Via Ansible Galaxy:
 Role Variables
 --------------
 
+	dumpall_keep_on_guest: no
+	dumpall_keep_on_host: yes
+	
     dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
     dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 
+The dumpall_keep_on_guest and dumpall_keep_on_host variables let you choose where you want to keep the dump file.
 The dumpall_guest_destination variable is where the dump file is created on the target. The dumpall_host_destination is where all dumps are retrieved from target.
 
+All variables are mandatory, and they are documented in default/main.yml.
 
 Example Playbook
 -------------------------
@@ -45,8 +49,9 @@ Example with a host_destination will result in a dumpfile /examine/ansible.all o
 
     - hosts: servers
       roles:
-         - role: dumpall
-           dumpall_host_destination: /tmp/my_prj
+        - role: dumpall
+		  dumpall_keep_on_guest: yes
+          dumpall_host_destination: /tmp/my_prj
 
 
 License

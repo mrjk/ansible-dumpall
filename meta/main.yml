@@ -41,4 +41,5 @@ galaxy_info:
     - debug
     - variable
     - export
+    - dump
 dependencies: []
