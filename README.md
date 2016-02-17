@@ -3,7 +3,7 @@ Dumpall role for Ansible
 
 [![Ansible Galaxy Role](https://img.shields.io/badge/Ansible%20Role-mrjk.dumpall-blue.svg?style=flat-square)](https://galaxy.ansible.com/detail#/role/6960)
 
-Dump all remote variables and (optionally) copy the result to a destination on the host.
+Dump all remote variables and (optionally) copy the result to a destination on the host. This role is Ansible 2.0 compatible.
 
 Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w), and the very nice implementation of [f500](https://github.com/f500/ansible-dumpall). This version basically fixes some minor bugs, and avoid file name collision.
 
@@ -12,12 +12,19 @@ Requirements
 
 None.
 
+Installation
+------------
+
+Via Ansible Galaxy:
+    ansible-galaxy install mrjk/ansible-role-dumpall
+
+
 Role Variables
 --------------
 
     dumpall_flat_mode: yes
-    dumpall_guest_destination: /tmp/ansible.all
-    dumpall_host_destination: /tmp/ansible/dump/
+    dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
+    dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 
 Example Playbook
 -------------------------
