@@ -54,7 +54,9 @@ Release
 
 There are the release informations:
 * v2.0.1:
-  * Fix Ansible 2.2 branch issue
+  * Compatibility with Ansible 2.2 branch
+  * Change 'guest' keywork to 'target', to make things easier to understand
+  * Broken compatibility with previous version on 'dumpall_guest_destination' variable
 * v2.0.0:
   * First stable version for Ansible 2.x branch
 
