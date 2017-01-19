@@ -49,6 +49,16 @@ Example with a host_destination will result in a dumpfile /examine/ansible.all o
            dumpall_host_destination: /tmp/my_prj
 
 
+Release
+-------
+
+There are the release informations:
+* v2.0.1:
+  * Fix Ansible 2.2 branch issue
+* v2.0.0:
+  * First stable version for Ansible 2.x branch
+
+
 License
 -------
 
