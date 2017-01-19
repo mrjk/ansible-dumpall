@@ -25,23 +25,23 @@ Via Ansible Galaxy:
 Role Variables
 --------------
 
-    dumpall_guest_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
+    dumpall_target_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
     dumpall_host_destination: "/tmp/ansible/dump/{{ inventory_hostname }}"
 
-The dumpall_guest_destination variable is where the dump file is created on the target. The dumpall_host_destination is where all dumps are retrieved from target.
+The dumpall_target_destination variable is where the dump file is created on the target. The dumpall_host_destination is where all dumps are retrieved from target.
 
 
 Example Playbook
 -------------------------
 
-Example without a host_destination will result in a dumpfile /tmp/ansible.all on the guest:
+Example without a host_destination will result in a dumpfile /tmp/ansible.all on the target:
 
     - hosts: servers
       roles:
          - dumpall
 
 Example with a host_destination will result in a dumpfile /examine/ansible.all on the host machine:
-(the dumpfile on the guest is removed)
+(the dumpfile on the target is removed)
 
     - hosts: servers
       roles:
