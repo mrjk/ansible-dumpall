@@ -1,6 +1,8 @@
 Dumpall role for Ansible
 ========
 
+NOT MAINTENED: This module is not maintened anymore. Feel free to fork. If you are looking for a replacement, have a look to this role: [ansible-role-debug-dumpallvars](https://github.com/openmicroscopy/ansible-role-debug-dumpallvars)
+
 [![Ansible Galaxy Role](https://img.shields.io/badge/Ansible%20Role-mrjk.dumpall-blue.svg?style=flat-square)](https://galaxy.ansible.com/detail#/role/6960)
 
 Dump all remote variables and (optionally) copy the result to a destination on the host. It is really helpful to have a dump of all variables (because the official documentation lacks of clarity on this point) and it helps a lot to debug your roles/playbooks.  This role is Ansible 2.0 compatible.
